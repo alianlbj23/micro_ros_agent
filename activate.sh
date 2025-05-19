@@ -39,10 +39,10 @@ for i in "${!DEVICES[@]}"; do
       --privileged \
       --name "${CONTAINER_NAME}" \
       --network compose_my_bridge_network \
-      -v /dev:/dev \
+      -v /dev/usb_robot_arm:/dev/usb_robot_arm \
       -e ROS_DOMAIN_ID=1 \
       microros/micro-ros-agent:humble \
-      serial --dev "${DEVICE}"
+      serial --dev "${DEVICE}" -b 921600
 
     # Store valid container names for cleanup
     VALID_CONTAINER_NAMES+=("$CONTAINER_NAME")
