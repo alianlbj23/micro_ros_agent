@@ -1,0 +1,10 @@
+devices:
+  - name: /dev/usb_rear_wheel
+    baud_rate: 115200
+    domain_id: 11
+  - name: /dev/usb_front_wheel
+    baud_rate: 115200
+    domain_id: 22
+  - name: /dev/usb_robot_arm
+    baud_rate: 921600
+    domain_id: 33
